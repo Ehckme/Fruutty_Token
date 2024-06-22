@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    {% block head%}
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href='https://fonts.googleapis.com/css?family=Golos Text' rel='stylesheet'>
+
+
+     <link rel="stylesheet" type="text/css"
+          href="{{ url_for('fruuty_token.static', filename='style/generator.css') }}" >
+
+      <link rel="stylesheet" type="text/css"
+          href="{{ url_for('fruuty_token.static', filename='style/scanner.css') }}" >
+
+    <link rel="stylesheet" type="text/css"
+          href="{{ url_for('fruuty_token.static', filename='style/scanner_results.css') }}" >
+
+    <link rel="stylesheet" type="text/css"
+          href="{{ url_for('fruuty_token.static', filename='style/scanner_modal.css') }}" >
+
+    <link rel="stylesheet" type="text/css"
+          href="{{ url_for('fruuty_token.static', filename='style/fruuty.css') }}" >
+
+    <link rel="stylesheet" type="text/css"
+          href="{{ url_for('fruuty_token.static', filename='style/index.css') }}" >
+
+
+
+    <link rel="stylesheet" href="hw1.css">
+
+
+
+
+
+    <script src="{{ url_for('fruuty_token.static', filename='js/scanner.js') }}"
+    > </script>
+
+    <script src="{{ url_for('fruuty_token.static', filename='js/scanner_modal.js') }}"
+    > </script>
+
+    <script src="{{ url_for('fruuty_token.static', filename='js/fruuty.js') }}"
+    > </script>
+
+    <script src="{{ url_for('fruuty_token.static', filename='js/generator.js') }}"
+    > </script>
+
+
+
+
+
+
+
+
+
+
+
+
+    <title> {% block title %}  {% endblock  %} </title>
+
+    {% endblock %}
+
+</head>
+
+<body>
+
+    {% block content %}
+
+    {% endblock %}
+
+</body>
+
+</html>

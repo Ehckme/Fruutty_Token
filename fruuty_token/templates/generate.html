@@ -1,0 +1,82 @@
+{% extends 'base_fruuty.html' %}
+
+{% block title %}
+    qr code
+{% endblock  %}
+
+{% block content %}
+
+<div class="body html">
+
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+
+            <div class="alert success">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                {{ message }}
+            </div>
+
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+
+
+
+         <!-- Full-width columns: (hidden by default) -->
+
+
+
+            <div>
+
+
+            </div>
+            <div >
+
+                <h1> Fruuty Token </h1>
+
+                <div class="generate_token_container">
+                      <form action="{{  url_for('fruuty_token.generate')  }}" method="post" style="width:100%">
+
+                        <label for="fqrcode_token"> fruuty token </label>
+                        <input type="text" class="generate_token" id="fruuty_token" name="fruuty_token"
+                               placeholder="enter fuuty token amount .." required>
+
+                        <button id="create_token"  type="submit" > create token </button>
+
+
+                            <div >
+
+                                <img id="picture" src="data:image/png;base64,{{ token }}" style="width:60%;">
+
+
+                            </div>
+
+                      </form>
+                </div>
+
+                <script>
+                        setInputFilter(document.getElementById("fruuty_token"), function(value) {
+                          return /^-?\d*[.,]?\d*$/.test(value);
+                        }, "Must be a floating (real) number");
+                </script>
+
+
+
+
+
+
+
+
+            </div>
+
+
+
+</div>
+
+
+
+
+
+{% endblock %}

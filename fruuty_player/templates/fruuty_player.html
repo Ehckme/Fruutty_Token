@@ -1,0 +1,82 @@
+{% extends 'base_fruuty_player.html' %}
+
+
+
+
+
+
+    {% block title %}
+        fruuty player
+    {% endblock  %}
+
+
+
+{% block content %}
+
+<div class="body html">
+
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+
+            <div class="alert success">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                {{ message }}
+            </div>
+
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+
+
+
+         <!-- Full-width columns: (hidden by default) -->
+        <h1> fruuty player </h1>
+
+
+            <div class="generate_token_container">
+
+                <audio id="myAudio">
+                      <source src="{{ url_for('fruuty_player.static', filename='Kaiji_MPThree.mp3') }} " type="audio/ogg">
+                      <source src="{{ url_for('fruuty_player.static', filename='Kaiji_MPThree.mp3') }} " type="audio/mpeg">
+                      Your browser does not support the audio element.
+                </audio>
+
+                <p>Click the buttons to play or pause the audio.</p>
+
+                    <button onclick="playAudio()" type="button">Play Audio</button>
+                    <button onclick="pauseAudio()" type="button">Pause Audio</button>
+
+                <script>
+                    var x = document.getElementById("myAudio");
+
+                    function playAudio() {
+                      x.play();
+                    }
+
+                    function pauseAudio() {
+                      x.pause();
+                    }
+                </script>
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+{% endblock %}

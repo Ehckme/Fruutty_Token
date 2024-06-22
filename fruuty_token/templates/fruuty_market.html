@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title> fruuty market </title>
+
+<link rel="stylesheet" type="text/css"
+          href="{{ url_for('fruuty_token.static', filename='style/fruuty_market.css') }}" >
+</head>
+<body>
+  <div class="wrapper">
+    <div class="object">
+      <div class="carousel">
+        <div class="cell">
+          {% include 'fruuty_player.html'  %}
+
+         <!-- <img id="image"
+         src="https://cdn.shopify.com/s/files/1/1453/9306/products/19950NBT2-2_1024x1024.jpg?v=1504778561"> -->
+
+        </div>
+        <div class="cell">
+          <h3 style="color:black;"> Food </h3>
+          <img id="image" src="https://www.mcdonalds.co.za/media/products/grand-chicken-spicy-hot-meal/Grand-chicken-spicy-meal.webp">
+
+        </div>
+        <div class="cell">
+          <h3>LET'S GET WIRED</h3>
+          <img id="image" src="https://images-na.ssl-images-amazon.com/images/I/71Sozrhp53L._SX679_.jpg">
+
+        </div>
+        <div class="cell">
+          <h3>DEAD POOL</h3>
+          <img id="image" src="http://www.honcho-sfx.com/blog/wp-content/uploads/2015/08/Deadpool-trailer-300x300.jpg">
+
+        </div>
+        <div class="cell">
+          <h3> FASHION </h3>
+          <img id="image" src="{{ url_for('fruuty_token.static', filename='img/fashion/1.jpg'  ) }}">
+
+        </div>
+     </div>
+
+    </div>
+  </div>
+
+    <p class="button-group">
+      <button class="previous-button">  </button>
+      <button class="next-button">  </button>
+    </p>
+  </div>
+
+  <script src="{{ url_for('fruuty_token.static', filename='js/fruuty_market.js') }}"
+    > </script>
+
+</body>
+</html>
